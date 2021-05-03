@@ -3,7 +3,7 @@ import cambio
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 import logging
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',level=logging.INFO)
-TOKEN = '1793236680:AAEewxcQu4RFzAaOyCZ_Rwz-d5slYsMltxk'
+TOKEN = 
 
 
 print ('In ascolto ...')
