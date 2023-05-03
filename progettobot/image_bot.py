@@ -2,11 +2,17 @@ import logging
 from telegram import Update
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, CallbackContext
 from google_images_search import GoogleImagesSearch
+from environs import Env
 
 # Sostituisci con il tuo token API del bot Telegram, la chiave API di Google e l'ID del motore di ricerca personalizzato
-TOKEN = "6043130273:AAHkJs8QYynqS0Gpqqr_GIWQpLmVvAt4pPI"
-GOOGLE_API_KEY = "AIzaSyC_RMi7O6ndfm6hwQ9NDO6ArWUOfjm4sIk"
-SEARCH_ENGINE_ID = "108905974852183232718"
+
+env = Env()
+env.read_env()
+
+TOKEN = env('TOKEN')
+GOOGLE_API_KEY = env('GOOGLE_API_KEY')
+SEARCH_ENGINE_ID = env('SEARCH_ENGINE_ID')
+
 
 gis = GoogleImagesSearch(GOOGLE_API_KEY, SEARCH_ENGINE_ID)
 
