@@ -13,7 +13,6 @@ TOKEN = env('TOKEN')
 GOOGLE_API_KEY = env('GOOGLE_API_KEY')
 SEARCH_ENGINE_ID = env('SEARCH_ENGINE_ID')
 
-
 gis = GoogleImagesSearch(GOOGLE_API_KEY, SEARCH_ENGINE_ID)
 
 # Abilita il logging
